@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAPPY ROSE DAY</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('https://i.imgur.com/STBPZHr.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .container {
+        text-align: center;
+        margin-top: 50px; /* Adjust margin as needed */
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .texture-page {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    }
+    .texture-page h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 20px;
+    }
+    .texture-page p {
+        font-size: 1.2rem;
+        color: #333333;
+    }
+    .bottom-button {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 2rem;
+        background-color: #f9f9f9;
+        color: #c70039;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .bottom-button1 {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 1rem;
+        background-color: #c70039;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+    .popup img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto; /* Center the image horizontally */
+        max-height: 80vh; 
+    }
+    .popup p {
+        font-size: 1.2rem;
+        color: #333333;
+    }
+    .popup.visible {
+        display: block;
+    }
+    .popup1 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+    .popup1 img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto; /* Center the image horizontally */
+        max-height: 80vh; 
+    }
+    .popup1.visible {
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>&hearts; HAPPY ROSE DAY &hearts;</h1>
+    </div>
+    <div class="texture-page">
+        <h2>Dear Future Husband,</h2>
+        <p>This is our first valentine's week as a couple. I had planned a lot of things for our first valentine's week.... but as we know nothing in our life goes as planned. But my parmeshwar taught me that even if things don't go as planned we can always try to make the best out of it. So here's my try on making this valentines week a special one. Even though i am not sure if i can complete all the things i have planned due to my internship but i will definitely try my best.</p>
+        <p> Let me start by saying I Love You a lottt and I know you love me a lott too. I am blessed to have someone like you in my life. I had never thought that i would get anyone so calm, sensitive, protective and caring person in my life. You are like a rose to me.... sensitive and soft and handsome and wonderful for me like the rose petals but barrier and cranky and angrier for anyone who tries to hurt me just like thorns that protect rose from getting plucked. I love you too much to express it in plain words but all i would say is that i want us as lifepartners, soulmates and to be each others last love on this entire universe.</p>
+        <p> Trust me I will also be like thorns for you to protect you from anyone who tries to hurt you all i ask is for you to stay with me forever.</p>
+        <p> Te quiero tanto, amor mío. No puedo imaginar mi vida sin ti. Eres mi corazón y mi vida.<br> I LOVE YOU SO SO SO SO SO SO SO MUCHHH.<br> I will love you always and forever &hearts;</p>
+        <p>Yours one and only Love,<br><br>Mansi (aka. Bubu's Cutuu) &hearts;<br>07-02-2024</p>
+    </div>
+    <button class="bottom-button" onclick="showPopup()">Click Me</button>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+         <p>Here's a rose for you Love.</p>
+        <img src="https://i.imgur.com/0T5WZZq.jpeg" alt="Rose">
+        <p> HAPPY ROSE DAY DARLING &hearts;</p>
+        <button class = "bottom-button1" onclick="showPopup1()">Open My Heart &hearts;</button>
+         <div class = "popup1" id="popup1" style="display: none;">
+             <img src="https://i.imgur.com/VXUVSNF.jpeg" alt="Love">
+             <p> &hearts; &hearts; &hearts;</p>
+             <button class = "bottom-button1" onclick="goToDay()">Back to Week's Page</button>
+         </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup").classList.add("visible");
+        }
+        function showPopup1() {
+           document.getElementById("popup1").style.display = "block";
+        }
+        function goToDay() {
+            window.location.href = "Days.html"; 
+        }
+    </script>
+</body>
+</html>

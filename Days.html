@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Days</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f9f9 ;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 10%);
+        margin: 0 auto;
+    }
+    .button-container {
+        width: 32%;
+    }
+    button {
+        width: 60%;
+        height: 150px;
+        margin: 1%;
+        border: none;
+        cursor: not-allowed;
+        background-color: #FFC0CB; /* Color changed to #c70039 */
+        position: relative;
+        overflow: hidden;
+        font-size: 1.5rem; /* Increased font size */
+        font-weight: bold; /* Made text bold */
+        color: white; /* Changed text color to white */
+        border-radius: 50%; /* Added border-radius for circle shape */
+    }
+    .clickable {
+        cursor: pointer;
+        background-color: #c70039;
+        animation: heartbeat 1s infinite; /* Added heartbeat animation */
+    }
+    
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="row">
+        <div class="button-container">
+            <button class="clickable" onclick="goToDay1()">&hearts; DAY - 1 &hearts;</button>
+        </div>
+        <div class="button-container">
+            <button>&hearts; DAY - 2 &hearts;</button>
+        </div>
+        <div class="button-container">
+            <button>&hearts; DAY - 3 &hearts;</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="button-container">
+            <button>&hearts; DAY - 4 &hearts;</button>
+        </div>
+        <div class="button-container">
+            <button>&hearts; DAY - 5 &hearts;</button>
+        </div>
+        <div class="button-container">
+            <button>&hearts; DAY - 6 &hearts;</button>
+        </div>
+        <div class="button-container">
+            <button>&hearts; DAY - 7 &hearts;</button>
+        </div>
+    </div>
+    <script>
+        function goToDay1() {
+            window.location.href = "roseday.html"; // Change "day1.html" to the desired webpage URL
+        }
+    </script>
+</body>
+</html>
