@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy First Valentines Week</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        position: relative;
+        overflow: hidden; /* Prevent hearts from overflowing */
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        text-align: center;
+        position: relative; /* Ensure z-index works */
+        z-index: 1; /* Ensure container appears above hearts */
+    }
+    h1 {
+        font-size: 3rem;
+        color: #c70039;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .heart {
+        color: #c70039;
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 1.7rem;
+        margin-top: 30px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    .envelope {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 40px;
+        background-color: red;
+        color: #c70039;
+        border-radius: 50%;
+        animation: bounce 1s infinite;
+    }
+    .envelope img {
+        width: 150px;
+        height: auto;
+    }
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    .popup.visible {
+        display: block;
+    }
+    .heart-btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #c70039;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+    }
+    .heart-btn:hover {
+        background-color: #9b0037;
+        transform: scale(1.1);
+    }
+    .start-btn {
+    }
+    .no-btn {
+        cursor: not-allowed;
+    }
+    .no-btn::after {
+    }
+    .yes-btn {
+        padding: 15px 30px;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        animation: heartbeat 1s infinite;
+    }
+    /* Animation */
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+    @keyframes heartbeat {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    /* Heart Shape */
+    .heart-shape {
+        position: absolute;
+        width: 10px;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+        height: 10px;
+        color: #c70039;
+        background-color: #c70039;
+    }
+   
+    /* Adjust positions to fill the page */
+/* Heart positions */
+.heart1 { top: 10%; left: 5%; }
+.heart2 { top: 10%; left: 25%; }
+.heart3 { top: 10%; left: 45%; }
+.heart4 { top: 10%; left: 65%; }
+.heart5 { top: 10%; left: 85%; }
+.heart6 { top: 45%; left: 5%; }
+.heart7 { top: 45%; left: 25%; }
+.heart8 { top: 40%; left: 45%; }
+.heart9 { top: 40%; left: 65%; }
+.heart10 { top: 45%; left: 85%; }
+.heart11 { top: 75%; left: 5%; }
+.heart12 { top: 75%; left: 25%; }
+.heart13 { top: 75%; left: 45%; }
+.heart14 { top: 75%; left: 65%; }
+.heart15 { top: 75%; left: 85%; }
+.heart17 { top: 110%; left: 25%; }
+.heart18 { top: 105%; left: 45%; }
+.heart19 { top: 110%; left: 65%; }
+.heart20 { top: 105%; left: 75%; }
+.heart21 { top: 20%; left: 5%; }
+.heart22 { top: 25%; left: 25%; }
+.heart23 { top: 20%; left: 45%; }
+.heart24 { top: 25%; left: 65%; }
+.heart25 { top: 20%; left: 85%; }
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Happy First Valentines Week</h1>
+    <div class="heart">&hearts;</div>
+    <p>Lets start our journey of endless dates and valentines forever!!!</p>
+    <div class="envelope" onclick="showPopup()">
+        <img src="https://img.icons8.com/ios-glyphs/150/000000/open-envelope--v1.png" alt="envelope">
+    </div>
+    <div class="popup" id="popup">
+        <p>Would you like to go on our first virtual date week?</p>
+        <button class="heart-btn yes-btn" onclick="showNewPopup()">&hearts;Yes&hearts;</button>
+        <button class="heart-btn no-btn" onclick="showPopup()">No</button>
+    </div>
+    <div class="popup" id="newPopup">
+        <p>Congrtulations you have been selected to go on a virtual date with your Cutuuu Mansi!!!</p>
+        <button class="heart-btn start-btn" onclick="goToNextPage()">Let's Start Our First Virtual Date</button>
+    </div>
+</div>
+
+<!-- Heart shapes -->
+<div class="heart-shape heart1"></div>
+<div class="heart-shape heart2"></div>
+<div class="heart-shape heart3"></div>
+<div class="heart-shape heart4"></div>
+<div class="heart-shape heart5"></div>
+<div class="heart-shape heart6"></div>
+<div class="heart-shape heart7"></div>
+<div class="heart-shape heart8"></div>
+<div class="heart-shape heart9"></div>
+<div class="heart-shape heart10"></div>
+<div class="heart-shape heart11"></div>
+<div class="heart-shape heart12"></div>
+<div class="heart-shape heart13"></div>
+<div class="heart-shape heart14"></div>
+<div class="heart-shape heart15"></div>
+<div class="heart-shape heart17"></div>
+<div class="heart-shape heart18"></div>
+<div class="heart-shape heart19"></div>
+
+<script>
+    function showPopup() {
+        document.getElementById("popup").classList.add("visible");
+    }
+
+    function showNewPopup() {
+        document.getElementById("newPopup").classList.add("visible");
+        document.querySelector(".yes-btn").style.animation = "none";
+        document.querySelector(".yes-btn").offsetHeight; /* Trigger reflow */
+        document.querySelector(".yes-btn").style.animation = "heartbeat 1s infinite";
+    }
+
+    function goToNextPage() {
+        // Redirect to another page
+        document.getElementById("popup").classList.add("visible");
+        window.location.href = "Days.html";
+    }
+</script>
+</body>
+</html>
